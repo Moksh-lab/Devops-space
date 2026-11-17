@@ -1,0 +1,13 @@
+# Terraform files
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+
+# Python & System
+__pycache__/
+*.pyc
+.env
+.DS_Store
+Thumbs.db
