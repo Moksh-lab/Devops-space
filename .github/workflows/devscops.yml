@@ -11,7 +11,7 @@ jobs:
   # JOB 1: Security & Secret Scan (Gitleaks)
   # ==========================================
   secret-scan:
-    name: 🔒 Secret Scan (Gitleaks)
+    name:  Secret Scan (Gitleaks)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -28,7 +28,7 @@ jobs:
   # JOB 2: Build, Test & Container Security (Trivy)
   # ==========================================
   build-and-scan:
-    name: 🐳 Build, Test & Trivy Vulnerability Scan
+    name:  Build, Test & Trivy Vulnerability Scan
     runs-on: ubuntu-latest
     needs: secret-scan
     steps:
@@ -59,4 +59,4 @@ jobs:
           sleep 5
           # Healthz endpoint check karein
           curl -f http://localhost:8000/healthz || exit 1
-          echo "✅ DevPulse Health Check Passed Successfully!"
+          echo " DevPulse Health Check Passed Successfully!"
